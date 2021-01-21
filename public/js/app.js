@@ -20,7 +20,7 @@ const messageTwo = document.querySelector('#message-two')
 // messageOne.textContent = 'From Javascript' // use textContent to change value of the html element, in this case a <p> tag.
 
 const getWeather = (location) => {
-    const url = 'http://localhost:3000/weather?address=' + encodeURIComponent(location)
+    const url = '/weather?address=' + encodeURIComponent(location)
     fetch(url).then((response)=> {
     response.json().then((data) => {
         if (data.error) {
