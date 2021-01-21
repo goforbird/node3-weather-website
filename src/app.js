@@ -21,11 +21,6 @@ hbs.registerPartials(partialsPath)
 // Setup static directory for Express to serve
 app.use(express.static(publicDirectoryPath))
 
-
-// app.get('', ( req, res ) => { // (route, function (obj containing info about incoming request, response))
-//     res.send('<h1>HOME PAGE FTFW</h1>')
-// }) 
-
 app.get('', ( req, res ) => { // handlebars
     res.render('index', {
         title: 'Weather',
@@ -47,27 +42,6 @@ app.get('/help', (req,res) => {
         name: 'Jim'
     })
 })
-
-// app.get('/help', ( req, res ) => {
-//     res.send([{
-//         name: 'Andrew',
-//         age: 27
-//     },{
-//         name: 'Sarah',
-//         age: 26
-//     }])
-// })
-
-// app.get('/products', (req,res) => {
-//     if (!req.query.search) {
-//         return res.send({
-//             error: 'You gotta fucking search you moron.'
-//         })
-//     }
-//     res.send({
-//         products: []
-//     })
-// })
 
 app.get('/weather', (req, res) => {
     const {address} = req.query
