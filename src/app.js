@@ -95,4 +95,4 @@ app.get('*', (req, res) => {
 
 })
 
-app.listen(port, () => { console.log('Server is up on port 3000') }) // port 3000 is a common developer port (port, optional callback when server is started up)
+app.listen(port, () => { console.log('Server is up on port ' + port) }) // port 3000 is a common developer port (port, optional callback when server is started up)
